@@ -19,7 +19,7 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             A Journey Through Africa Nigeria Beauty: Exploring the Streets of Lagos
             </h3>
             <div className={styles.detail}>
               <span className={styles.username}>ONI Tee</span>
@@ -37,11 +37,11 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Navigating First Impressions: Introduce Yourself
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Ajibs Ken</span>
+              <span className={styles.date}> - 12-09-24</span>
             </div>
           </div>
         </Link>
@@ -54,11 +54,11 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             My Favorite Authentic Nigerian Jollof-Rice: Truely Amazing
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Feranmi John</span>
+              <span className={styles.date}> - 11-09-24</span>
             </div>
           </div>
         </Link>
@@ -71,15 +71,15 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Fashion is Timeless and Flawless:Modern Philantropist Ajibs ken says
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Bayo Backend</span>
+              <span className={styles.date}> - 07-05-24</span>
             </div>
           </div>
         </Link>
-
+{/* 
         <Link href='/' className={styles.item}>
           <div className={styles.textContainer}>
             <span className={styles.category}>
@@ -95,8 +95,9 @@ const Menu = () => {
               <span className={styles.date}> - 15-10-24</span>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
+
 
       <h2 className={styles.subtitle}>Dscover By Topics</h2>
       <h1 className={styles.title}>Category</h1>
@@ -124,13 +125,14 @@ const Menu = () => {
         </Link>
       </div>
 
+
       <h2 className={styles.subtitle}>Choosen By The Editor</h2>
       <h1 className={styles.title}>Editors Pick</h1>
       <div className={styles.items}>
 
         <Link href='/' className={styles.item}>
           <div className={styles.imageContainer}>
-            <Image src='/p1.jpeg' alt="" fill className={styles.image} />
+            <Image src='/travel.png' alt="" fill className={styles.image} />
           </div>
           <div className={styles.textContainer}>
             <span className={styles.category}>
@@ -139,7 +141,7 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             A Journey Through Africa Nigeria Beauty: Exploring the Streets of Lagos
             </h3>
             <div className={styles.detail}>
               <span className={styles.username}>ONI Tee</span>
@@ -151,7 +153,7 @@ const Menu = () => {
 
         <Link href='/' className={styles.item}>
           <div className={styles.imageContainer}>
-            <Image src='/p1.jpeg' alt="" fill className={styles.image} />
+            <Image src='/culture.png' alt="" fill className={styles.image} />
           </div>
           <div className={styles.textContainer}>
             <span className={styles.category}>
@@ -160,18 +162,18 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Navigating First Impressions: Introduce Yourself
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Ajibs Ken</span>
+              <span className={styles.date}> - 12-09-24</span>
             </div>
           </div>
         </Link>
 
         <Link href='/' className={styles.item}>
           <div className={styles.imageContainer}>
-            <Image src='/p1.jpeg' alt="" fill className={styles.image} />
+            <Image src='/food.png' alt="" fill className={styles.image} />
           </div>
           <div className={styles.textContainer}>
             <span className={styles.category}>
@@ -180,18 +182,18 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             My Favorite Authentic Nigerian Jollof-Rice: Truely Amazing
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Feranmi John</span>
+              <span className={styles.date}> - 11-09-24</span>
             </div>
           </div>
         </Link>
 
-        {/* <Link href='/' className={styles.item}>
+        <Link href='/' className={styles.item}>
           <div className={styles.imageContainer}>
-            <Image src='/p1.jpeg' alt="" fill className={styles.image} />
+            <Image src='/fashion.png' alt="" fill className={styles.image} />
           </div>
           <div className={styles.textContainer}>
             <span className={styles.category}>
@@ -200,18 +202,18 @@ const Menu = () => {
               </span>
             </span>
             <h3 className={styles.postTitle}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Fashion is Timeless and Flawless:Modern Philantropist Ajibs ken says
             </h3>
             <div className={styles.detail}>
-              <span className={styles.username}>ONI Tee</span>
-              <span className={styles.date}> - 15-10-24</span>
+              <span className={styles.username}>Bayo Backend</span>
+              <span className={styles.date}> - 07-05-24</span>
             </div>
           </div>
         </Link>
 
-        <Link href='/' className={styles.item}>
+        {/* <Link href='/' className={styles.item}>
           <div className={styles.imageContainer}>
-            <Image src='/p1.jpeg' alt="" fill className={styles.image} />
+            <Image src='/coding.png' alt="" fill className={styles.image} />
           </div>
           <div className={styles.textContainer}>
             <span className={styles.category}>

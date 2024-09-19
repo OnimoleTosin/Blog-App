@@ -17,13 +17,10 @@ const Card = () => {
                     <span className={styles.category}>CULTURE</span>
                 </div>
                 <Link href='/'>
-                    <h3>Lorem gufyuf dolor sit amet alim consectetur adipisicing elit.</h3>
+                    <h3>New Visual Feature is a Game Changer.</h3>
                 </Link>
                 <p className={styles.desc}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Cupiditate, quam nisi magni ea laborum inventore voluptatum
-                    laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-                    quisquam! Harum unde sit culpa debitis.
+                    Apple just revealed a new feature in their new released product that catapults the minds of...
                 </p>
                 <Link href='/' className={styles.link}>Read More</Link>
 
