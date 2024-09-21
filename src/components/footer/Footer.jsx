@@ -9,13 +9,14 @@ const Footer = () => {
       <div className={styles.info}>
         <div className={styles.logo}>
           <Image src="/logo.png" alt="lama blog" width={50} height={50} />
-          <h1 className={styles.logoText}>ONIblog</h1>
+          <h1 className={styles.logoText}>ONI-Blog</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+        All content, including but not limited to articles, images, graphics, and multimedia, is the property of ONI-Blog and is protected by copyright laws. Unauthorized use or reproduction of any material without written permission is strictly prohibited.
+
+For inquiries, please contact us at Onimolesodiq282@Gmail.com.
+
+
         </p>
         <div className={styles.icons}>
           <Image src="/facebook.png" alt="" width={18} height={18} />

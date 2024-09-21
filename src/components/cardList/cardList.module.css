@@ -46,9 +46,18 @@
 }
 
 .link {
-    border-bottom: 1px solid crimson;
-    width: max-content;
-    padding: 2px 0px;
+    border: none;
+    background: none;
+    color: crimson;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    font-size: 14px;
 }
 
 @media screen and (max-width: 1280px) {

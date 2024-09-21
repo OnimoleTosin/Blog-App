@@ -1,0 +1,60 @@
+/* modal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end; /* Align modal to the right */
+  align-items: center; /* Center the modal vertically */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 100%;
+  max-height: 400px; /* Set the maximum height to be smaller */
+  position: relative;
+  animation: popUp 0.3s ease-out; /* Pop-up animation */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  overflow: auto; /* Ensure content doesn't overflow if too long */
+}
+
+/* Pop-up animation using scale */
+@keyframes popUp {
+  from {
+    transform: scale(0.8); /* Start smaller */
+    opacity: 0;
+  }
+  to {
+    transform: scale(1); /* End at the normal size */
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modalTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modalCategory,
+.modalUsername,
+.modalDate,
+.modalDescription {
+  margin-bottom: 10px;
+}
