@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react'; // Import useState
 import Pagination from '../pagination/Pagination';
 import styles from './cardList.module.css';
