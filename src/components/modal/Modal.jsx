@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './modal.module.css'; // Add your modal styling here
+import Link from 'next/link';
 
 const Modal = ({ item, closeModal }) => {
   const modalRef = useRef();
@@ -21,16 +22,18 @@ const Modal = ({ item, closeModal }) => {
   if (!item) return null; // Return null if no item is passed
 
   return (
+    <Link href='/travels' className={styles.container}>
     <div className={styles.modalOverlay}>
       <div ref={modalRef} className={styles.modal}>
         <button className={styles.closeButton} onClick={closeModal}>X</button>
         <h2 className={styles.modalTitle}>{item.title}</h2>
+        <p className={styles.modalDescription}><strong>Description:</strong> {item.modalDescription} </p>
         <p className={styles.modalCategory}><strong>Category:</strong> {item.category}</p>
         <p className={styles.modalUsername}><strong>Author:</strong> {item.username}</p>
         <p className={styles.modalDate}><strong>Date:</strong> {item.date}</p>
-        <p className={styles.modalDescription}>Here, you can add more detailed information about the post. You can dynamically fetch it if needed.</p>
       </div>
     </div>
+    </Link>
   );
 };
 

@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link href="/"className={styles.link}>HomePage</Link>
         <Link href="/blog" className={styles.link}>Blog</Link>
         <Link href="/" className={styles.link}>Contact</Link>
-        <Link href="/" className={styles.link}>About</Link>
+        <Link href="/about" className={styles.link}>About</Link>
         <Link href="/post" className={styles.link}>Post</Link>
 
         <AuthLinks/>

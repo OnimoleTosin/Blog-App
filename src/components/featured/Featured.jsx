@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -17,7 +18,7 @@ const Featured = () => {
           <p className={styles.postDesc}>
            Whether you're an aspiring artist, a curious thinker, or simply lookig to add a touch of creativity to you routine, our journey together will remind you that creativity knows no bounds. Get ready to unlock a word of inovation and self-expression!
           </p>
-          <button className={styles.button}>Read More</button>
+          <Link href='/post' className={styles.button}>Read More..</Link>
         </div>
       </div>
     </div>

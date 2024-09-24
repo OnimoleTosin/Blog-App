@@ -1,4 +1,7 @@
-/* modal.module.css */
+.container {
+  margin-top: 10px;
+}
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -13,7 +16,7 @@
 }
 
 .modal {
-  background: white;
+  background-color: var(--softBg);
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -23,6 +26,7 @@
   animation: popUp 0.3s ease-out; /* Pop-up animation */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
   overflow: auto; /* Ensure content doesn't overflow if too long */
+  margin-right: 40px;
 }
 
 /* Pop-up animation using scale */
@@ -45,9 +49,11 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: red;
 }
 
 .modalTitle {
+  color: var(--softTextColor);
   font-size: 20px;
   margin-bottom: 10px;
 }

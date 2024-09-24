@@ -95,7 +95,7 @@ const CategoryList = () => {
         </Link>
 
         <Link
-          href="/blog?cat=style"
+          href="/travels"
           className={`${styles.category} ${styles.travel}`}
         >
             <Image

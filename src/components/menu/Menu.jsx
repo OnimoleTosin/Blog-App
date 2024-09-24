@@ -25,6 +25,7 @@ const Menu = () => {
       title: "A Journey Through Africa Nigeria Beauty: Exploring the Streets of Lagos",
       username: "ONI Tee",
       date: "15-10-24",
+      modalDescription:'h'
     },
     {
       category: "Culture",
@@ -107,7 +108,7 @@ const Menu = () => {
         <Link href="/blog" className={`${styles.categoryItem} ${styles.food}`}>
           Food
         </Link>
-        <Link href="/blog" className={`${styles.categoryItem} ${styles.travel}`}>
+        <Link href="/travels" className={`${styles.categoryItem} ${styles.travel}`}>
           Travel
         </Link>
         <Link href="/blog" className={`${styles.categoryItem} ${styles.culture}`}>

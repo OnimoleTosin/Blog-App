@@ -1,0 +1,125 @@
+/* pages/about.module.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--softTextColor);
+}
+
+.text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--softTextColor);
+}
+
+.team {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    max-width: 350px;
+    margin-bottom: 2rem;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 1rem;
+    color: var(--softTextColor);
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--softTextColor);
+}
+
+/* Responsiveness */
+
+/* For tablets and smaller screens (less than 768px wide) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.75rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .team {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .member {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* For mobile screens (less than 480px wide) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
