@@ -8,13 +8,14 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="lama blog" width={50} height={50} />
+          <Image src="/footer.JPG" alt="lama blog" width={50} height={50} />
           <h1 className={styles.logoText}>ONI-Blog</h1>
         </div>
         <p className={styles.desc}>
-        All content, including but not limited to articles, images, graphics, and multimedia, is the property of ONI-Blog and is protected by copyright laws. Unauthorized use or reproduction of any material without written permission is strictly prohibited.
+          All content, including but not limited to articles, images, graphics, and multimedia, is the property of ONI-Blog and is protected by copyright laws.
+          <p>Unauthorized use or reproduction of any material without written permission is strictly prohibited. For inquiries, please contact us at Onimolesodiq282@Gmail.com.
 
-For inquiries, please contact us at Onimolesodiq282@Gmail.com.
+          </p>
 
 
         </p>
@@ -29,16 +30,16 @@ For inquiries, please contact us at Onimolesodiq282@Gmail.com.
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
+          <Link href="/style">Style</Link>
+          <Link href="/fashion">Fashion</Link>
+          <Link href="/coding">Coding</Link>
+          <Link href="travel/">Travel</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>

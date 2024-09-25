@@ -9,7 +9,7 @@ const About = () => {
             <section className={styles.section}>
                 <h2 className={styles.subtitle}>Our Story</h2>
                 <p className={styles.text}>
-                    Welcome to <strong>Your Blog Name</strong>! Our blog was created with the mission of bringing inspiring, informative, and insightful content to readers all over the world. 
+                    Welcome to <strong>ONI-blog</strong>! Our blog was created with the mission of bringing inspiring, informative, and insightful content to readers all over the world. 
                     Whether you’re looking for tips on personal growth, the latest news, or deep dives into industry trends, we’ve got something for everyone. 
                     What started as a small personal project has now grown into a full-fledged platform where creativity and curiosity meet.
                 </p>
@@ -29,10 +29,10 @@ const About = () => {
                 <div className={styles.team}>
                     <div className={styles.member}>
                         <img src="/p2.png" alt="Author 1" className={styles.image} />
-                        <h3 className={styles.name}>Onimol Sodiq Oluwatosin</h3>
+                        <h3 className={styles.name}>Onimole Sodiq Oluwatosin</h3>
                         <p className={styles.role}>Senior Web Devloper</p>
                         <p className={styles.bio}>
-                            John is the visionary behind <strong>Your Blog Name</strong>. With a background in journalism and a passion for storytelling, 
+                            ONImole is the visionary behind <strong>ONI-blog</strong>. With a background in journalism and a passion for storytelling, 
                             he launched this platform to share his insights on life, growth, and everything in between. When he's not writing, 
                             you’ll find him reading books or hiking in the mountains.
                         </p>
@@ -40,10 +40,10 @@ const About = () => {
 
                     <div className={styles.member}>
                         <img src="/pk.jpg" alt="Author 2" className={styles.image} />
-                        <h3 className={styles.name}>Jane Smith</h3>
+                        <h3 className={styles.name}>Ajibise Abd-Mojiid Ifeoluwa</h3>
                         <p className={styles.role}>Content Strategist</p>
                         <p className={styles.bio}>
-                            Jane is the mastermind behind our content calendar. With a keen eye for trending topics and evergreen content, 
+                            Mojiid is the mastermind behind our content calendar. With a keen eye for trending topics and evergreen content, 
                             she ensures that our readers are always engaged with fresh, high-quality posts. Outside of work, she loves exploring local coffee shops and capturing moments with her camera.
                         </p>
                     </div>

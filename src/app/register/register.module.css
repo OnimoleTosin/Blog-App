@@ -1,0 +1,149 @@
+/* register.module.css */
+
+/* Container Styling for Register Page */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--softBg);
+}
+
+/* Form Box Styling */
+.formBox {
+    background-color: var(--softBg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1.5s ease;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--TextColor);
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: slideDown 1.2s ease-in-out;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 25px;
+    animation: fadeUp 1.2s ease;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 12px 45px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.inputBox input:focus {
+    border-color: #ff7675;
+    outline: none;
+}
+
+
+
+/* Submit Button Styling */
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7675;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(231, 76, 60, 0.2);
+}
+
+/* Link to Switch Pages */
+.switch {
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.switch a {
+    color: #ff7675;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+
+/* For screens less than 600px wide */
+@media (max-width: 600px) {
+    .formBox {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .inputBox input {
+        padding: 10px 40px;
+    }
+
+    .submitButton {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
