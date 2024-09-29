@@ -1,10 +1,8 @@
-/* styles/Contact.module.css */
-
 .contactContainer {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--softBg);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -13,7 +11,7 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--textColor);
 }
 
 .form {
@@ -29,7 +27,7 @@
   font-size: 1rem;
   margin-bottom: 0.5rem;
   display: block;
-  color: #333;
+  color: var(--textColor);
 }
 
 .inputGroup input,
@@ -44,7 +42,7 @@
 .submitButton {
   padding: 0.8rem 2rem;
   background-color: #0070f3;
-  color: white;
+  color: var(--textColor);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -54,4 +52,13 @@
 
 .submitButton:hover {
   background-color: #005bb5;
+}
+
+.notification {
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: center;
 }

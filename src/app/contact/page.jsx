@@ -1,13 +1,16 @@
-// pages/page.jsx
-import { useState } from 'react';
-import styles from '../styles/Contact.module.css';
+"use client";
 
-export default function Contact() {
+import { useState } from 'react';
+import styles from '../contact/contact.module.css';
+
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
+  const [notification, setNotification] = useState(null);  // Notification state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,18 +22,36 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send to API)
-    console.log(formData);
+    
+    // Simulate sending email (You can replace this with actual API call)
+    console.log('Form submitted:', formData);
+
+    // Show success notification
+    setNotification('Email sent successfully!');
+
     // Reset form
     setFormData({ name: '', email: '', message: '' });
+
+    // Hide the notification after 3 seconds
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000);
   };
 
   return (
     <div className={styles.contactContainer}>
       <h1 className={styles.header}>Contact Us</h1>
+
+      {/* Notification alert */}
+      {notification && (
+        <div className={styles.notification}>
+          {notification}
+        </div>
+      )}
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
@@ -41,7 +62,7 @@ export default function Contact() {
           />
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
@@ -52,7 +73,7 @@ export default function Contact() {
           />
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             name="message"
@@ -66,4 +87,6 @@ export default function Contact() {
       </form>
     </div>
   );
-}
+};
+
+export default Contact;
