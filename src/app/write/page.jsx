@@ -5,17 +5,37 @@ import styles from "./writePage.module.css";
 import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css"
+import { useRouter } from 'next/navigation';
 
 
 const WritePage = () => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('');
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+
+
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    const newPost = { title, content, id: Date.now() };
+
+    const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    savedPosts.push(newPost);
+    localStorage.setItem('posts', JSON.stringify(savedPosts));
+
+    router.push('/blog');
+  };
 
   return (
     <div className={styles.container}>
+      <form onSubmit={handleSubmit}>
       <input
         type="text"
+        value={title}
         placeholder="Title"
+        onChange={(e) => setTitle(e.target.value)}
         className={styles.input}
       />
       <select className={styles.select}>
@@ -54,16 +74,17 @@ const WritePage = () => {
         <ReactQuill
           className={styles.textArea}
           theme="bubble"
-          value={value}
-          onChange={setValue}
+          value={content}
+          onChange={setContent}
           placeholder="Tell your story..."
         />
       </div>
-      <button className={styles.publish} 
-      // onClick={handleSubmit}
+      <button type="submit" className={styles.publish}
       >
         Publish
       </button>
+      </form>
+
     </div>
   );
 };

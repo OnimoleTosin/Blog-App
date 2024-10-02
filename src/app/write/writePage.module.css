@@ -35,10 +35,6 @@
   border-color: #1a8917;
 }
 
-.textArea {
-  width: 100%;
-}
- 
 .add {
   display: flex;
   gap: 20px;
@@ -50,6 +46,7 @@
 }
 
 .input{
+  width: 100%;
   padding: 50px;
   font-size: 64px;
   border: none;
@@ -60,6 +57,10 @@
 
 .input::placeholder{
   color: #b3b3b1;
+}
+
+.textArea {
+  width: 100%;
 }
 
 .publish{
