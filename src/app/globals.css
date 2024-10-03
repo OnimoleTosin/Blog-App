@@ -29,9 +29,7 @@
   .dark {
     --bg: #0f172a;
     --textColor: #ddd;
-
-
-
+    --softBg: #1f273a;
     --softTextColor: #a6a6a6;
   }
   
@@ -92,4 +90,9 @@
   
   .quill > .ql-container > .ql-editor.ql-blank::before{
     color: #b3b3b1;
+  }
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
