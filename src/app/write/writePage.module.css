@@ -1,10 +1,10 @@
-.container{
+.container {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.select{
+.select {
   margin-bottom: 50px;
   padding: 10px 20px;
   margin-left: 50px;
@@ -45,7 +45,7 @@
   left: 50px;
 }
 
-.input{
+.input {
   width: 100%;
   padding: 50px;
   font-size: 64px;
@@ -55,15 +55,18 @@
   color: var(--textColor);
 }
 
-.input::placeholder{
+.input::placeholder {
   color: #b3b3b1;
 }
 
 .textArea {
   width: 100%;
+  border: 1px solid #ddd; /* Add border to the text area */
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.publish{
+.publish {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -73,4 +76,13 @@
   color: white;
   cursor: pointer;
   border-radius: 20px;
+}
+
+/* Styling for image preview */
+.imagePreview {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
 }

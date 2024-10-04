@@ -12,6 +12,7 @@ const WritePage = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [file, setFile] = useState(null); // State to hold the selected image
+  const [imagePreview, setImagePreview] = useState(null); // State for image preview
   const [category, setCategory] = useState(''); // To hold the category value
 
   const router = useRouter();
@@ -53,6 +54,14 @@ const WritePage = () => {
     });
   };
 
+  const handleImageChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+      setImagePreview(URL.createObjectURL(selectedFile)); // Set image preview
+    }
+  };
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>
@@ -89,7 +98,7 @@ const WritePage = () => {
               <input
                 type="file"
                 id="image"
-                onChange={(e) => setFile(e.target.files[0])}
+                onChange={handleImageChange} // Handle image change
                 style={{ display: "none" }}
               />
               <label htmlFor="image" className={styles.addButton}>
@@ -111,6 +120,12 @@ const WritePage = () => {
             placeholder="Tell your story..."
           />
         </div>
+        {/* Show image preview */}
+        {imagePreview && (
+          <div className={styles.imagePreview}>
+            <Image src={imagePreview} alt="Selected image" width={800} height={450} />
+          </div>
+        )}
         <button type="submit" className={styles.publish}>
           Publish
         </button>

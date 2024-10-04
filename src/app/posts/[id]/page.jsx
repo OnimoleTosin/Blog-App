@@ -60,12 +60,24 @@ const PostDetails = () => {
         <div className={styles.infoContainer}>
           <div className={styles.textContainer}>
             <h1 className={styles.title}> {post.title}</h1>
+
+            {/* Display image after the title */}
+            {post.image && (
+              <div className={styles.imageContainer}>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={'auto'}  // Adjust width as needed
+                  height={'auto'} // Adjust height as needed
+                  className={styles.postImage}
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.content}>
           <div className={styles.post}>
-            <div className={styles.description}>{post.content}
-            </div>
+            <div className={styles.description}>{post.content}</div>
             <div className={styles.comment}>
               <Comments />
             </div>
@@ -74,19 +86,14 @@ const PostDetails = () => {
         </div>
       </div>
 
-
-
       <div className={styles.buttons}>
-          <button className={styles.editButton} onClick={handleEdit}>
-            Edit
-          </button>
-          <button className={styles.deleteButton} onClick={handleDelete}>
-            Delete
-          </button>
-        </div>  {/*
-     <div className={styles.comment}>
-        <Comments />
-      </div>  */}
+        <button className={styles.editButton} onClick={handleEdit}>
+          Edit
+        </button>
+        <button className={styles.deleteButton} onClick={handleDelete}>
+          Delete
+        </button>
+      </div>
     </>
   );
 };

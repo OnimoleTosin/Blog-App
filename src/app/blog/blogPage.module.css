@@ -110,6 +110,60 @@
   color: var(--textColor);
 }
 
+.interactionButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.likeButton,
+.commentButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--textColor);
+}
+
+.commentsSection {
+  margin-top: 10px;
+}
+
+.commentForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.commentInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.commentSubmit {
+  padding: 10px 20px;
+  background-color: #1a8917;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.commentList {
+  margin-top: 10px;
+}
+
+.comment {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
 @media screen and (max-width: 1280px) {
   .imageContainer {
       display: none;
