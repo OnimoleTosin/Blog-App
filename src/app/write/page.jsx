@@ -8,6 +8,12 @@ import "react-quill/dist/quill.bubble.css";
 import { useRouter } from 'next/navigation';
 
 const WritePage = () => {
+  const formats = [
+    'header', 'bold', 'italic', 'underline', 'list', 'bullet', 'link', 'image'
+  ];
+
+
+
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -25,9 +31,12 @@ const WritePage = () => {
       imageBase64 = await convertToBase64(file); // Convert image to base64 string
     }
 
+    const cleanedContent = content.replace(/<\/?[^>]+(>|$)/g, ""); // Basic regex to remove tags
+      
+
     const newPost = {
       title,
-      content,
+      content: cleanedContent,  // Use cleaned content
       category,
       image: imageBase64, // Store the base64 image in the post
       id: Date.now(),
@@ -64,21 +73,25 @@ const WritePage = () => {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}
+      required>
         <input
           type="text"
           value={title}
           placeholder="Title"
+          required
           onChange={(e) => setTitle(e.target.value)}
           className={styles.input}
         />
         <select
           className={styles.select}
+          required
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="">Select Category</option>
           <option value="style">Style</option>
+          <option value="Music">Music</option>
           <option value="fashion">Fashion</option>
           <option value="food">Food</option>
           <option value="culture">Culture</option>
@@ -118,14 +131,20 @@ const WritePage = () => {
             value={content}
             onChange={setContent}
             placeholder="Tell your story..."
+            required
+            formats={formats}  // Limit to these formats
+
           />
         </div>
         {/* Show image preview */}
         {imagePreview && (
-          <div className={styles.imagePreview}>
-            <Image src={imagePreview} alt="Selected image" width={800} height={450} />
-          </div>
-        )}
+  <div className={styles.imagePreview}>
+    <button className={styles.closeButton} onClick={() => setImagePreview(null)}>
+      &times;
+    </button>
+    <img src ={imagePreview} className={styles.image} alt="Selected image" />
+  </div>
+)}
         <button type="submit" className={styles.publish}>
           Publish
         </button>
@@ -135,3 +154,10 @@ const WritePage = () => {
 };
 
 export default WritePage;
+
+
+
+
+
+
+

@@ -51,10 +51,10 @@ const Comments = () => {
         if (newComment.trim()) {
             const newCommentData = {
                 id: comments.length + 1,
-                username: "Your Username", // You can replace this with the authenticated user's username
+                username: "ONimole Sodiq Oluwatosin", // You can replace this with the authenticated user's username
                 date: new Date().toLocaleDateString(),
                 desc: newComment,
-                image: "/your-image.jpg" // Replace with the user's image or avatar
+                image: "/p2.png" // Replace with the user's image or avatar
             };
             // Add new comment to the top of the list
             setComments([newCommentData, ...comments]);

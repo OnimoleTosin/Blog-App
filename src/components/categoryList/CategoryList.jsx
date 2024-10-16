@@ -53,7 +53,7 @@ const CategoryList = () => {
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
         <Link
-          href="/blog?cat=style"
+          href="/styles"
           className={`${styles.category} ${styles.style}`}
         >
             <Image
@@ -67,7 +67,7 @@ const CategoryList = () => {
         </Link>
 
         <Link
-          href="/blog?cat=style"
+          href="/fashion"
           className={`${styles.category} ${styles.fashion}`}
         >
             <Image
@@ -81,7 +81,7 @@ const CategoryList = () => {
         </Link>
 
         <Link
-          href="/blog?cat=style"
+          href="/food"
           className={`${styles.category} ${styles.food}`}
         >
             <Image
@@ -108,7 +108,7 @@ const CategoryList = () => {
           travel
         </Link>
         <Link
-          href="/blog?cat=style"
+          href="/culture"
           className={`${styles.category} ${styles.culture}`}
         >
             <Image
@@ -122,7 +122,7 @@ const CategoryList = () => {
         </Link>
 
         <Link
-          href="/blog?cat=style"
+          href="coding"
           className={`${styles.category} ${styles.coding}`}
         >
             <Image

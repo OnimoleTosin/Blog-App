@@ -8,13 +8,12 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/footer.JPG" alt="lama blog" width={50} height={50} />
+          <Image src="/logo.png" alt="ONI blog" width={50} height={50} />
           <h1 className={styles.logoText}>ONI-Blog</h1>
         </div>
         <p className={styles.desc}>
           All content, including but not limited to articles, images, graphics, and multimedia, is the property of ONI-Blog and is protected by copyright laws.
           <p>Unauthorized use or reproduction of any material without written permission is strictly prohibited. For inquiries, please contact us at Onimolesodiq282@Gmail.com.
-
           </p>
 
 

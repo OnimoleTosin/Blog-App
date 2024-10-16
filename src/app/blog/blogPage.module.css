@@ -31,6 +31,7 @@
 .post {
   display: flex;
   gap: 20px;
+  align-items: center;
   border-bottom: 1px solid var(--textColor);
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -39,14 +40,12 @@
 
 .imageContainer {
   flex: 1;
+  height: 350px;
   position: relative;
-  width: 200px;
-  height: 200px; /* Adjust based on your preference */
 }
 
 .image {
   object-fit: cover;
-  border-radius: 5px;
 }
 
 .postContent {
@@ -88,6 +87,7 @@
 
 .link {
   border: none;
+  width: 20%;
   background: none;
   color: crimson;
   cursor: pointer;
@@ -168,4 +168,23 @@
   .imageContainer {
       display: none;
   }
+}
+.createPostButtonContainer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.createPostButton {
+  padding: 10px 20px;
+  background-color: #1a8917;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.createPostButton:hover {
+  background-color: #145c11;
 }

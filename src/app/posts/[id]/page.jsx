@@ -55,47 +55,40 @@ const PostDetails = () => {
   };
 
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.infoContainer}>
-          <div className={styles.textContainer}>
-            <h1 className={styles.title}> {post.title}</h1>
-
-            {/* Display image after the title */}
-            {post.image && (
-              <div className={styles.imageContainer}>
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={'auto'}  // Adjust width as needed
-                  height={'auto'} // Adjust height as needed
-                  className={styles.postImage}
-                />
-              </div>
-            )}
-          </div>
+    <div className={styles.container}>
+      <div className={styles.infoContainer}>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>{post.title}
+          </h1>
         </div>
-        <div className={styles.content}>
-          <div className={styles.post}>
-            <div className={styles.description}>{post.content}</div>
-            <div className={styles.comment}>
-              <Comments />
-            </div>
-          </div>
-          <Menu />
+        <div className={styles.imageContainer}>
+          <Image src={post.image} alt="" width={420}
+            height={300} className={styles.image} />
         </div>
       </div>
 
-      <div className={styles.buttons}>
-        <button className={styles.editButton} onClick={handleEdit}>
-          Edit
-        </button>
-        <button className={styles.deleteButton} onClick={handleDelete}>
-          Delete
-        </button>
+      <div className={styles.content}>
+        <div className={styles.post}>
+          <div className={styles.description}>
+            <p>{post.content}</p>
+          </div>
+          <div className={styles.buttons}>
+            <button className={styles.editButton} onClick={handleEdit}>
+              Edit
+            </button>
+            <button className={styles.deleteButton} onClick={handleDelete}>
+              Delete
+            </button>
+          </div>
+          <div className={styles.comment}>
+            <Comments />
+          </div>
+        </div>
+        <Menu />
       </div>
-    </>
+    </div>
   );
 };
 
 export default PostDetails;
+

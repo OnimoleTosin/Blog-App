@@ -38,6 +38,7 @@ export const fashionPosts = [
 
 const FashionPage = () => {
   const [expanded, setExpanded] = useState({});
+  const filteredPost = fashionPosts.filter(blog => blog.author === 'Emily Brown')
 
   const toggleExpand = (index) => {
     setExpanded((prev) => ({ ...prev, [index]: !prev[index] }));

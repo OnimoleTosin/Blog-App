@@ -9,6 +9,19 @@ import { FaChevronUp, FaChevronDown, FaHeart, FaCommentAlt } from "react-icons/f
 import styles from "../blog/blogPage.module.css";
 
 const BlogPage = () => {
+
+
+  const handleDelete = () => {
+    if (confirm("Are you sure you want to delete this post?")) {
+      const updatedPosts = JSON.parse(localStorage.getItem('posts')).filter(
+        (p) => p.id !== post.id
+      );
+      localStorage.setItem('posts', JSON.stringify(updatedPosts));
+      router.push('/blog');
+    }
+  };
+
+
   const [posts, setPosts] = useState([]);
   const [expanded, setExpanded] = useState({});
   const [likes, setLikes] = useState({});
@@ -28,27 +41,9 @@ const BlogPage = () => {
   };
 
   const handleLike = (postId) => {
-    const updatedLikes = { ...likes, [postId]: (likes[postId] || 0) + 1 };
+    const updatedLikes = { ...likes, [postId]: (likes[postId] || 0) + 0 };
     setLikes(updatedLikes);
     localStorage.setItem("likes", JSON.stringify(updatedLikes));
-  };
-
-  const handleAddComment = (postId, comment) => {
-    const updatedComments = {
-      ...comments,
-      [postId]: [...(comments[postId] || []), comment],
-    };
-    setComments(updatedComments);
-    localStorage.setItem("comments", JSON.stringify(updatedComments));
-  };
-
-  const handleCommentSubmit = (e, postId) => {
-    e.preventDefault();
-    const commentInput = e.target.comment.value;
-    if (commentInput.trim()) {
-      handleAddComment(postId, commentInput);
-      e.target.comment.value = "";
-    }
   };
 
   const capitalizeCategory = (category) => {
@@ -58,6 +53,14 @@ const BlogPage = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}> Blogs </h1>
+      
+      {/* "Create New Post" Button */}
+      <div className={styles.createPostButtonContainer}>
+        <Link href="/write">
+          <button className={styles.createPostButton}>Create New Post</button>
+        </Link>
+      </div>
+
       <div className={styles.cardListContainer}>
         <div className={styles.my6}>
           {posts.length === 0 ? (
@@ -89,41 +92,12 @@ const BlogPage = () => {
                         <FaHeart className={styles.icon} />
                         {likes[post.id] || 0} Likes
                       </button>
-                      <button
-                        onClick={() => toggleExpand(index)}
-                        className={styles.commentButton}
-                      >
-                        <FaCommentAlt className={styles.icon} />
-                        {comments[post.id]?.length || 0} Comments
-                      </button>
+                      <Link href={`/posts/${post.id}`}>
+                        <button className={styles.commentButton}>
+                          <FaCommentAlt className={styles.icon} />
+                        </button>
+                      </Link>
                     </div>
-
-                    {/* Show comments section if expanded */}
-                    {expanded[index] && (
-                      <div className={styles.commentsSection}>
-                        <form
-                          onSubmit={(e) => handleCommentSubmit(e, post.id)}
-                          className={styles.commentForm}
-                        >
-                          <input
-                            type="text"
-                            name="comment"
-                            placeholder="Write a comment..."
-                            className={styles.commentInput}
-                          />
-                          <button type="submit" className={styles.commentSubmit}>
-                            Submit
-                          </button>
-                        </form>
-                        <div className={styles.commentList}>
-                          {comments[post.id]?.map((comment, idx) => (
-                            <p key={idx} className={styles.comment}>
-                              {comment}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    )}
 
                     <button onClick={() => toggleExpand(index)} className={styles.link}>
                       {expanded[index] ? "Show Less" : "Read More"}

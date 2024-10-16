@@ -44,7 +44,7 @@ const About = () => {
                         <p className={styles.role}>Content Strategist</p>
                         <p className={styles.bio}>
                             Mojiid is the mastermind behind our content calendar. With a keen eye for trending topics and evergreen content, 
-                            she ensures that our readers are always engaged with fresh, high-quality posts. Outside of work, she loves exploring local coffee shops and capturing moments with her camera.
+                            he ensures that our readers are always engaged with fresh, high-quality posts. Outside of work, he loves exploring local coffee shops and capturing moments with his camera.
                         </p>
                     </div>
                 </div>

@@ -21,23 +21,6 @@ const LoginPage = () => {
   
   return (
     <div className={styles.container}>
-       <div className={styles.formBox}>
-                <h2 className={styles.title}>Login</h2>
-                <form className={styles.form}>
-                    <div className={styles.inputBox}>
-                        <FontAwesomeIcon icon={faUser} className={styles.icon} />
-                        <input type="text" required placeholder="Username" />
-                    </div>
-                    <div className={styles.inputBox}>
-                        <FontAwesomeIcon icon={faLock} className={styles.icon} />
-                        <input type="password" required placeholder="Password" />
-                    </div>
-                    <button className={styles.submitButton} type="submit">Login</button>
-                    <p className={styles.switch}>
-                        Don’t have an account? <Link href="/register">Register</Link>
-                    </p>
-                </form>
-            </div>
       <div className={styles.wrapper}>
         <div className={styles.socialButton}>Sign in with Google
         <Image src='/google.png' width={24} height={24} marginLeft={5}/>
