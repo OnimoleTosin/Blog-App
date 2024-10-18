@@ -1,7 +1,6 @@
 // pages/blog.js
 "use client"
 
-import Link from 'next/link';
 import { useState } from "react";
 import blogPosts from "../../components/AllBlogs/index";
 import styles from "../blog-post/blog-post.module.css";
@@ -37,9 +36,7 @@ const BlogPost = () => {
         {filteredPosts.map((post) => (
           <div key={post.id} className={styles.postCard}>
             <img src={post.img} alt={post.title} className={styles.postImage} />
-            <Link href={`/blog-post/${post.id}`} passHref>
-  <h2 className={styles.postTitle}>{post.title}</h2>
-</Link>
+            <h2 className={styles.postTitle}>{post.title}</h2>
             <p className={styles.postDesc}>{post.desc}</p>
             <p className={styles.postAuthor}>{post.author} - {post.date}</p>
           </div>

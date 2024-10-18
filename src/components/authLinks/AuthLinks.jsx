@@ -2,11 +2,13 @@
 import Link from "next/link";
 import styles from "./authLinks.module.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
 
-  const  status  = "notauthenticated";
+  const status = "notauthenticated";
 
   return (
     <>
@@ -22,20 +24,18 @@ const AuthLinks = () => {
           <span className={styles.link} onClick={signOut}>
             Logout
           </span>
-        </> 
+        </>
       )}
       <div className={styles.burger} onClick={() => setOpen(!open)}>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
+        <FontAwesomeIcon icon={faBars} />
       </div>
       {open && (
         <div className={styles.responsiveMenu}>
-       <Link href="/">HomePage</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/">Contact</Link>
-        <Link href="/about">About</Link>
-        <Link href="/post">Post</Link>
+          <Link href="/">HomePage</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/">Contact</Link>
+          <Link href="/about">About</Link>
+          <Link href="/post">Post</Link>
 
           {status === "notauthenticated" ? (
             <Link href="/login">Login</Link>
