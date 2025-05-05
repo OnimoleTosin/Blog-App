@@ -11,7 +11,7 @@ const About = () => {
                 <h2 className={styles.subtitle}>Our Story</h2>
                 <p className={styles.text}>
                     Welcome to <strong>ONI-blog</strong>! Our blog was created with the mission of bringing inspiring, informative, and insightful content to readers all over the world.
-                    Whether you’re looking for tips on personal growth, the latest news, or deep dives into industry trends, we’ve got something for everyone.
+                    Whether you&apos;re looking for tips on personal growth, the latest news, or deep dives into industry trends, we&apos;ve got something for everyone.
                     What started as a small personal project has now grown into a full-fledged platform where creativity and curiosity meet.
                 </p>
             </section>
@@ -35,7 +35,7 @@ const About = () => {
                         <p className={styles.bio}>
                             ONImole is the visionary behind <strong>ONI-blog</strong>. With a background in journalism and a passion for storytelling,
                             he launched this platform to share his insights on life, growth, and everything in between. When he's not writing,
-                            you’ll find him reading books or hiking in the mountains.
+                            you&apos;ll find him reading books or hiking in the mountains.
                         </p>
                     </div>
 
@@ -62,8 +62,8 @@ const About = () => {
             <section className={styles.section}>
                 <h2 className={styles.subtitle}>Join the Journey</h2>
                 <p className={styles.text}>
-                    We’re excited to have you with us on this journey! Whether you’re here to learn, grow, or just be entertained, we hope our blog brings a little something special to your day.
-                    Feel free to browse our latest posts, leave comments, and join the conversation. Let’s grow together!
+                    We&apos;re excited to have you with us on this journey! Whether you&apos;re here to learn, grow, or just be entertained, we hope our blog brings a little something special to your day.
+                    Feel free to browse our latest posts, leave comments, and join the conversation. Let&apos;s grow together!
                 </p>
             </section>
         </div>
