@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import Image from "next/image";
 import styles from "./writePage.module.css";
@@ -6,6 +7,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import { useRouter } from 'next/navigation';
+
 
 const WritePage = () => {
   const formats = [
@@ -32,7 +34,7 @@ const WritePage = () => {
     }
 
     const cleanedContent = content.replace(/<\/?[^>]+(>|$)/g, ""); // Basic regex to remove tags
-      
+
 
     const newPost = {
       title,
@@ -47,7 +49,7 @@ const WritePage = () => {
     savedPosts.push(newPost);
     localStorage.setItem('posts', JSON.stringify(savedPosts));
 
-    router.push('/blog'); 
+    router.push('/blog');
   };
 
   const convertToBase64 = (file) => {
@@ -74,7 +76,7 @@ const WritePage = () => {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}
-      required>
+        required>
         <input
           type="text"
           value={title}
@@ -138,13 +140,13 @@ const WritePage = () => {
         </div>
         {/* Show image preview */}
         {imagePreview && (
-  <div className={styles.imagePreview}>
-    <button className={styles.closeButton} onClick={() => setImagePreview(null)}>
-      &times;
-    </button>
-    <img src ={imagePreview} className={styles.image} alt="Selected image" />
-  </div>
-)}
+          <div className={styles.imagePreview}>
+            <button className={styles.closeButton} onClick={() => setImagePreview(null)}>
+              &times;
+            </button>
+            <img src={imagePreview} className={styles.image} alt="Selected image" />
+          </div>
+        )}
         <button type="submit" className={styles.publish}>
           Publish
         </button>
