@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Use 'next/navigation' for app directory
-import styles from '../PostDetails.module.css';
-import Comments from "@/components/comments/Comments";
+import styles from '../postDetails.module.css';
+import Comments from "../../components/comments/Comments";
 import Menu from "../../../components/menu/Menu";
 import Image from 'next/image';
 
