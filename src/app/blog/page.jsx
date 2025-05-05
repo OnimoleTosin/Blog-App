@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CardList from "../../components/cardList/CardList";
-import Menu from "../../components/Menu/Menu";
+import CardList from "@/components/cardList/CardList";
+import Menu from "@/components/menu/Menu";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronUp, FaChevronDown, FaHeart, FaCommentAlt } from "react-icons/fa";
